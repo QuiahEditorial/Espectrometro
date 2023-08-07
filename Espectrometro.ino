@@ -1,7 +1,8 @@
 // Por Roberto A. Zavala
-// Libro : https://www.amazon.com.mx/dp/B074TTGLL2
-// Tienda: https://www.facebook.com/LaTeXnomicon/shop_tab
-// 🙏🏼    : DNv7acPAeVBhTXbKv26itJecPG1SPy2o4F
+// Libro :     https://www.amazon.com.mx/dp/B074TTGLL2
+// Tienda:     https://www.facebook.com/LaTeXnomicon/shop_tab
+// 🙏🏼 DogeTip: DNv7acPAeVBhTXbKv26itJecPG1SPy2o4F
+
 // Software genérico para espectrómetro V 1.1
 
 String comando;
