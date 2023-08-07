@@ -1,7 +1,7 @@
 // Por Roberto A. Zavala
 // Libro :     https://www.amazon.com.mx/dp/B074TTGLL2
 // Tienda:     https://www.facebook.com/LaTeXnomicon/shop_tab
-// X :         @QuiahEditorial
+// X :         @EditorialQuiah
 // QuiahEditorial R
 // 🙏🏼 DogeTip: DNv7acPAeVBhTXbKv26itJecPG1SPy2o4F
 
