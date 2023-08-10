@@ -119,7 +119,7 @@ pinMode(D, OUTPUT);
   S[2] = S[0]*S[0] ;
   S[3] = ( 6 * pow(m,5) + 15 * pow(m,4) + 10 * pow(m,3) - m ) / 30;
   for (int i=0; i<=m; i++) { Y[i] = analogRead(A0)/4; delay(10);} 
-Serial.println("\nBienvenido :)\n\nSPECTRONIC 20 GENESYS\n\nArduino Para El Trabajo Científico Espectrómetro v1.1\n\nIngresa 'Ayuda'");
+Serial.println("\nBienvenido :)\n\nEspectrómetro con Arduino\n\nArduino Para El Trabajo Científico Espectrómetro v1.1\n\nIngresa 'Ayuda'");
 }
 
 void loop()
