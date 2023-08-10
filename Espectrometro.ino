@@ -45,27 +45,6 @@ int   e;
 
 float Z;             // parse
 
-const int N = 9;       // 2n+1 de Savitzky Golay
-const int m = N-1;
-const int p = m-1;  
-int   t;
-float Fi;
-int   X [N];
-int   X2[N];
-int   X3[N];
-int   X4[N];
-float Y [N];
-float XY[N];
-float X2Y[N];
-float S[7];
-
-float SY;
-float SXY;
-float SX2Y;
-float S3=0;
-
-float ISG;             // Intensidad según Savitzky Golay
-
 int Suave[31]=
 {
  255 , // estos valores se guardan previamente en EEPROM
