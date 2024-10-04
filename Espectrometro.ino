@@ -199,37 +199,44 @@ Serial.print("Posición actual : ");  Serial.print(La);
 void Pas ()  // ======================================================================================= PASOS
 {
 if (Dir==1) { La += Stp; i++; n++;} else { La -= Stp; i--; n--;}
-if ( i > 119 ) { i = 0; } if ( i < 0 ) { i = 119; }
-if (i>89)
+if ( i > 120 ) { i = 0; } if ( i < 0 ) { i = 120; }
+Serial.print(i); Serial.print("\t");
+if (i>91)
    {
-   j = i-90; //Serial.print(i); Serial.print("\t"); Serial.println(j);
-   analogWrite(A, Suave[30-j]);
+   j = i-91; //Serial.print(i); Serial.print("\t"); Serial.println(j);
+   analogWrite(A, Suave[31-j]);
    analogWrite(B, 0);
    analogWrite(C, 0);
    analogWrite(D, Suave[j]);
+   Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
    }
-else if ( i>59 )
+else if ( i>61 )
   {
-  j = i-60; //Serial.print(i); Serial.print("\t"); Serial.println(j);
+  j = i-61; //Serial.print(i); Serial.print("\t"); Serial.println(j);
   analogWrite(A, 0);
   analogWrite(B, 0);
   analogWrite(C, Suave[j]);
-  analogWrite(D, Suave[30-j]);
+  analogWrite(D, Suave[31-j]);
+  Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
   }
-else if (i>29)
+else if (i>31)
   {
-  j = i-30; //Serial.print(i); Serial.print("\t"); Serial.println(j);
+  j = i-31; //Serial.print(i); Serial.print("\t"); Serial.println(j);
   analogWrite(A, 0);
   analogWrite(B, Suave[j]);
-  analogWrite(C, Suave[30-j]);
+  analogWrite(C, Suave[31-j]);
   analogWrite(D, 0);
+  Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
   }
 else
-  {         //Serial.println(i);
+  {
+  j=i-1;    //Serial.print(i); Serial.print("\t"); Serial.println(j);
   analogWrite(A, Suave[j]);
-  analogWrite(B, Suave[30-j]);
+  analogWrite(B, Suave[31-j]);
   analogWrite(C, 0);
   analogWrite(D, 0);
+  Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
   }
-  delay(d);
+  delay(50);
+  if (i==120){exit(0);}
 }
