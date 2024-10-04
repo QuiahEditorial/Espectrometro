@@ -199,44 +199,43 @@ Serial.print("Posición actual : ");  Serial.print(La);
 void Pas ()  // ======================================================================================= PASOS
 {
 if (Dir==1) { La += Stp; i++; n++;} else { La -= Stp; i--; n--;}
-if ( i > 120 ) { i = 0; } if ( i < 0 ) { i = 120; }
+if ( i > 120 ) { i = 1; } if ( i < 1 ) { i = 120; }
 Serial.print(i); Serial.print("\t");
 if (i>91)
    {
-   j = i-91; //Serial.print(i); Serial.print("\t"); Serial.println(j);
+   j = i-91;
    analogWrite(A, Suave[31-j]);
    analogWrite(B, 0);
    analogWrite(C, 0);
    analogWrite(D, Suave[j]);
-   Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
+   
    }
 else if ( i>61 )
   {
-  j = i-61; //Serial.print(i); Serial.print("\t"); Serial.println(j);
+  j = i-61;
   analogWrite(A, 0);
   analogWrite(B, 0);
   analogWrite(C, Suave[j]);
   analogWrite(D, Suave[31-j]);
-  Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
+  
   }
 else if (i>31)
   {
-  j = i-31; //Serial.print(i); Serial.print("\t"); Serial.println(j);
+  j = i-31;
   analogWrite(A, 0);
   analogWrite(B, Suave[j]);
   analogWrite(C, Suave[31-j]);
   analogWrite(D, 0);
-  Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
+  
   }
 else
   {
-  j=i-1;    //Serial.print(i); Serial.print("\t"); Serial.println(j);
+  j=i-1;
   analogWrite(A, Suave[j]);
   analogWrite(B, Suave[31-j]);
   analogWrite(C, 0);
   analogWrite(D, 0);
-  Serial.print(i); Serial.print("\t"); Serial.print(Suave[j]); Serial.print("\t"); Serial.println(Suave[30-j]);
+  
   }
-  delay(50);
-  if (i==120){exit(0);}
+  delay(5);
 }
